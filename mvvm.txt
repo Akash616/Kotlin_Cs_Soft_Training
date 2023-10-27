@@ -1,0 +1,7 @@
+//MVVM? Mvvm architecture gives your project a proper organized 
+    //structure with the help of its 3 components:
+    //Model - View - ViewModel
+    /* View (UI, View is responsible only for UI)
+    *  Model (DATA, Model is responsible for only data)
+    *  ViewModel (acts as a bridge b/w view and model it's responsible for
+    *           preparing and managing b/w data and UI.)*/
