@@ -46,3 +46,23 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+
+//private void createMediaPlayerIfNeeded() {
+//    if (mMediaPlayer == null) {
+//        mMediaPlayer = new MediaPlayer();
+//
+//        // Make sure the media player will acquire a wake-lock while
+//        // playing. If we don't do that, the CPU might go to sleep while the
+//        // song is playing, causing playback to stop.
+//        mMediaPlayer.setWakeMode(mService.getApplicationContext(), PowerManager.PARTIAL_WAKE_LOCK);
+//
+//        // we want the media player to notify us when it's ready preparing,
+//        // and when it's done playing:
+//        mMediaPlayer.setOnPreparedListener(this);
+//        mMediaPlayer.setOnCompletionListener(this);
+//        mMediaPlayer.setOnErrorListener(this);
+//        mMediaPlayer.setOnSeekCompleteListener(this);
+//    } else {
+//        mMediaPlayer.reset();
+//    }
+//}
