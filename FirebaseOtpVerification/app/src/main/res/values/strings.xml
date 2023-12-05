@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FirebaseOtpVerification</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgot_password">FORGOT PASSWORD</string>
+    <string name="forgot_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "717146154039",
+    "project_id": "phonenumberverify-45d47",
+    "storage_bucket": "phonenumberverify-45d47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717146154039:android:27afe84120762d05ce4bb2",
+        "android_client_info": {
+          "package_name": "com.kotlinpratice.firebaseotpverification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRCKHn5eMvfFYa9tkBEU7nxC_VjqqUDEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

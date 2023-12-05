@@ -64,11 +64,11 @@ class MainActivity : AppCompatActivity() {
         })
 
         mainViewModel.authors.observe(this, Observer {
-            //Log.d("Authors", it.results.toString())
+            Log.d("Authors", it.results.toString())
         })
 
         mainViewModel.quotesTags.observe(this, Observer {
-            //Log.d("Quotes Tags", it.results.toString())
+            Log.d("Quotes Tags", it.results.toString())
         })
 
         //--------------------------------------------

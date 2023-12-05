@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val contentResolver: ContentResolver = applicationContext.contentResolver
-        val myUri: Uri =  Uri.parse("content://media/external/audio/media/123")
+        val myUri: Uri =
         val audioPlayer = AudioPlayer(applicationContext)
         audioPlayer.playAudioFromUri(myUri)
 

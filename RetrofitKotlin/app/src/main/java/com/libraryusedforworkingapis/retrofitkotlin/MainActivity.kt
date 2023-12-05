@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         //To specify where the coroutines should run, Kotlin provides three dispatchers that you can use:
         //Dispatchers.Main, Dispatchers.IO, Dispatchers.Default
         //Coroutine Scope defines a scope for coroutines.
+        // Create a new coroutine to move the execution off the UI thread
         CoroutineScope(Dispatchers.IO).launch {
             val response = usersApi.getUsers()
             if (response.body() != null){

@@ -13,8 +13,9 @@ import kotlinx.coroutines.launch
 class MainViewModel(private val repository: QuoteRepository) : ViewModel() {
 
 
-    init {
+    init { //The code inside the init block is the first to be executed when the class is instantiated.
         viewModelScope.launch(Dispatchers.IO) {//Coroutine
+            //The CoroutineDispatcher that is designed for offloading blocking IO tasks to a shared pool of threads.
             repository.getQuotes(1)
             repository.getAuthors("name", "asc")
             repository.getQuotesTag("love|happiness")
