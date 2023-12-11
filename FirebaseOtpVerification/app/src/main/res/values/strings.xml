@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="forgot_password">FORGOT PASSWORD</string>
     <string name="forgot_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="default_web_client_id">717146154039-bvslq11q1agds1go9ak1bnsnnoutkt3t.apps.googleusercontent.com</string>
 </resources>

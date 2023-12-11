@@ -102,12 +102,14 @@
             android:textColor="@color/darkGreen"/>
 
         <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
             android:background="@drawable/ll_forgotborder_design"
             android:inputType="textPassword"
-            android:textColor="#959393"
+            android:textColor="@color/black"
+            android:hint="..."
             android:textSize="14sp"
             android:padding="15dp"/>
 

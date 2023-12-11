@@ -39,18 +39,16 @@ class ForgotPasswordFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentForgotPasswordBinding.inflate(inflater, container, false)
-
-//        val prefs = requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-//        val flag = prefs.getBoolean("flag", false)
-//        if (flag){
-//            findNavController().navigate(R.id.action_forgotPasswordFragment_to_homeScreenFragment)
-//        }
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.ivArrowBack.setOnClickListener {
+            activity?.onBackPressed()
+        }
+
         binding.fabForgotPassword.setOnClickListener {
             if (!binding.etPhoneNumber.text.toString().trim().isEmpty()) {
                 val country_code = "+" + binding.ccpForgotPass.selectedCountryCode.trim()

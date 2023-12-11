@@ -6,4 +6,24 @@
     </style>
 
     <style name="Theme.FirebaseOtpVerification" parent="Base.Theme.FirebaseOtpVerification" />
+
+    <style name="NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:datePickerDialogTheme">@style/MyCalendarView</item>
+    </style>
+
+    <style name="MyCalendarView" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <!-- Buttons Color-->
+        <item name="colorPrimary">@color/white</item>
+        <!--Days unselected Text Color and Month Text Color-->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!--Header Background Color and selected Day Background Color-->
+        <item name="colorAccent">@color/darkGreen</item>
+        <!--Month Background Color-->
+        <item name="colorSurface">@android:color/black</item>
+    </style>
+
 </resources>
