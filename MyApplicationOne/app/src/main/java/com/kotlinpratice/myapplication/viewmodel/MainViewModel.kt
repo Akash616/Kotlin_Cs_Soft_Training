@@ -5,8 +5,11 @@ import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.kotlinpratice.myapplication.api.QuoteService
 import com.kotlinpratice.myapplication.model.QuotesResponse
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainViewModel(private val quoteService: QuoteService) : ViewModel() {
 
