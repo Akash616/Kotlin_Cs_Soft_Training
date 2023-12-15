@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity(), NewsAdapter.NewsItemCLicked {
 
     lateinit var rvNews: RecyclerView
     lateinit var apiInterface: ApiInterface
-    lateinit var newsModal: NewsModal
     lateinit var adapter: NewsAdapter
+    lateinit var newsModal: NewsModal
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,14 +28,14 @@ class MainActivity : AppCompatActivity(), NewsAdapter.NewsItemCLicked {
 
         rvNews.layoutManager = LinearLayoutManager(this)
         apiCall()
-        adapter = NewsAdapter(newsModal, this)
-        rvNews.adapter = adapter
+//        adapter = NewsAdapter(newsModal, this)
+//        rvNews.adapter = adapter
 
     }
 
     private fun apiCall() {
         apiInterface = RetrofitHelper.getInstance().create(ApiInterface::class.java)
-        val call: Call<NewsModal> = apiInterface.getTopHeadlines("in", Constant.API_KEY)
+        val call = apiInterface.getTopHeadlines("in", Constant.API_KEY)
         call.enqueue(object : Callback<NewsModal> {
             override fun onResponse(call: Call<NewsModal>, response: Response<NewsModal>) {
                 if (response.isSuccessful){
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity(), NewsAdapter.NewsItemCLicked {
             }
 
             override fun onFailure(call: Call<NewsModal>, t: Throwable) {
-                TODO("Not yet implemented")
+                Log.d("onFailure: ", t.message.toString())
             }
 
         })
