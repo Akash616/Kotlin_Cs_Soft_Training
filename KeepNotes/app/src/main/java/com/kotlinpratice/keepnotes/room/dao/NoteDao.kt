@@ -13,8 +13,9 @@ interface NoteDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(note: Note)
+    //The suspend keyword means that this function can be blocking.
     //It's IO OPERATION running on main thread(UI thread), you app will slow
-    //So, abstract function running on background thread using coroutines (suspend - coroutines)
+    //So, abstract function running on background thread using coroutines (suspend(async) <-> coroutines(await))
     //means long running task will run on background, your app will not slow.
     //suspend fun.? -> ya walaa function sirf background thread say hi call ho sakta hai OR
     // ya phir ak dusra suspend function say call ho sakta hai.
@@ -25,7 +26,7 @@ interface NoteDao {
 
     @Query("Select * from notes_table order by id ASC")
     fun getAllNotes(): LiveData<List<Note>>
-    //Jasa hi is table(Note) ka andar agar kuch change hora hai, mujha(Activity) ko pata
+    //Jasa hi is table(Note) ka andar agar kuch change hora hai, mujha(Activity/Fragment) ko pata
     //chalna chahiya. SO, we use LiveData<> -> Life Cycle Aware, it's like wrapper on data.
     //hum Activity ko Observer bana denga.
     //Room support LiveData.

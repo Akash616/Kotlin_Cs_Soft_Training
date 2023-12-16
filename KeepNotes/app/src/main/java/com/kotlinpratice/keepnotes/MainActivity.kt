@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), INotesRvAdapter {
         rvNotes.adapter = adapter
 
         viewModel.allNotes.observe(this, Observer {list ->
-            list?.let {
+            list?.let {//let - execute a code block containing non-null values.
                 adapter.updateList(it)
             }
         })
@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity(), INotesRvAdapter {
         val noteText = etInput.text.toString()
         if (noteText.isNotEmpty()){
             viewModel.insertNote(Note(noteText))
+            Toast.makeText(this, "$noteText Inserted", Toast.LENGTH_SHORT).show()
         }
-        Toast.makeText(this, "$noteText Inserted", Toast.LENGTH_SHORT).show()
     }
 
 }

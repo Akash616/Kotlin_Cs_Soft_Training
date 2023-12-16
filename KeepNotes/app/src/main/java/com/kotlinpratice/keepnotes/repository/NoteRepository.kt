@@ -9,6 +9,7 @@ import com.kotlinpratice.keepnotes.room.entity.Note
 class NoteRepository(private val noteDao: NoteDao) { //Repository - access to multiple data sources.
 
     val allNotes: LiveData<List<Note>> = noteDao.getAllNotes() //function
+    //fun allNotes: LiveData<List<Note>> = noteDao.getAllNotes() //no error
 
     suspend fun insert(note: Note){
         noteDao.insert(note)

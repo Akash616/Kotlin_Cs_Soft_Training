@@ -11,13 +11,13 @@ import com.kotlinpratice.keepnotes.room.entity.Note
 abstract class NoteDatabase: RoomDatabase() { //abstract - we can't create an object of this class. But we create object of children class.
     //Database is a Entry point.
 
-    abstract fun getNoteDao(): NoteDao
+    abstract fun getNoteDao(): NoteDao //The Room database uses the DAO to issue queries to the SQLite database.
 
     companion object{
         // Singleton prevents multiple instances of database opening at the
         // same time. (Singleton class means only one instance)
         //synchronized(this) block -> Thread safe(means koi or thread isko is time pay access na kara jab tak ya chalra hai).
-        @Volatile
+        @Volatile //in order to force changes in a variable to be immediately visible to other threads
         private var INSTANCE: NoteDatabase? = null
 
         fun getDatabase(context: Context): NoteDatabase {
