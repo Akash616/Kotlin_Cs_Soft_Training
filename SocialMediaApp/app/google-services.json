@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "982490841976",
+    "project_id": "socialmedia-app-fa53b",
+    "storage_bucket": "socialmedia-app-fa53b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982490841976:android:8fcf32e2da9b97da007e8d",
+        "android_client_info": {
+          "package_name": "com.kotlinpratice.socialmediaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982490841976-097kjvvmpikgunkdtandondvtlsfmrgu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kotlinpratice.socialmediaapp",
+            "certificate_hash": "131439349dac19f0951ee6d9a13fb8d458024e0e"
+          }
+        },
+        {
+          "client_id": "982490841976-1hu5rb439kdjl77pogjmbm9k0i6pponf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjmoyDtBhuc82h-Ox0Jqob3i_0K-zON2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982490841976-1hu5rb439kdjl77pogjmbm9k0i6pponf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

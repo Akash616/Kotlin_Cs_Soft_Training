@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "224579658253",
+    "project_id": "ontapsignin-76b8e",
+    "storage_bucket": "ontapsignin-76b8e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224579658253:android:226fa6dcb7a85b3b45eb44",
+        "android_client_info": {
+          "package_name": "com.kotlinpratice.ontapgooglesignin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224579658253-jagne0o7036oisr02fjvjjakm8iuvhg1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kotlinpratice.ontapgooglesignin",
+            "certificate_hash": "131439349dac19f0951ee6d9a13fb8d458024e0e"
+          }
+        },
+        {
+          "client_id": "224579658253-v7ls033m7k9ugvcnd49sfo2iflu0mggr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKdCXt0MeoUoWWBfhpAJc_hSZMv2IZ2s4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224579658253-v7ls033m7k9ugvcnd49sfo2iflu0mggr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
