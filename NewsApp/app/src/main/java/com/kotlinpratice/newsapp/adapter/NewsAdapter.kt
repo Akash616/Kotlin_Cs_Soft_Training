@@ -29,7 +29,9 @@ class NewsAdapter(private val item: NewsModal, private val listener: NewsItemCLi
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.tvTitle.text = item.articles.get(position).title
         holder.tvAuthor.text = item.articles.get(position).author
-        Glide.with(holder.itemView.context).load(item.articles.get(position).urlToImage).into(holder.ivNewsImage)
+        Glide.with(holder.itemView.context).load(item.articles.get(position).urlToImage)
+            .placeholder(R.drawable.no_image)
+            .into(holder.ivNewsImage)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

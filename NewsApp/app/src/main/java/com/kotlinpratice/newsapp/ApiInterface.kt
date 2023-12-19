@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface ApiInterface {
 
-    @GET("/top-headlines")
+    @GET("top-headlines")
     fun getTopHeadlines(@Query("country") country: String, @Query("apiKey") apiKey: String) : Call<NewsModal>
 
 }
