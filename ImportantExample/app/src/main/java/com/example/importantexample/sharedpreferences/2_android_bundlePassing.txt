@@ -1,0 +1,64 @@
+//Bundle(data) Passing in Android
+ - means ak activity(screen) say dusari activity mai jana hai, or data bhi
+   la jana hai/transfer karna hai.
+ - IMPORTANT - In android, hum data ko manage 3 ways say kar sakta hai.
+	1. Bundle passing //runtime mai data manage karna hai
+	2. Shared Preferneces /* App close hona ka baad bhi data
+	3. Database (Internal Storage) manage hora hai */
+
+-----------------------------------------------------------------------------------
+---------------MainActivity.java ---------------------
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button btnNext;
+
+        btnNext = findViewById(R.id.btnNext);
+
+        Intent iNext;
+        iNext = new Intent(getApplicationContext(), SecondActivity.class);
+        //Bundle(Data) Passing
+        iNext.putExtra("title", "HomeScreen"); //(Key, value)
+        iNext.putExtra("StudentName", "Akash");
+        iNext.putExtra("Roll No", 10);
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//              Intent iNext;
+//              iNext = new Intent(getApplicationContext(), SecondActivity.class);
+                startActivity(iNext);
+            }
+        });
+
+    }
+}
+
+-----------------------SecondActivity.java--------------------------------
+public class SecondActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+
+        // receive/fetch Data
+        Intent fromAct = getIntent();
+        String title = fromAct.getStringExtra("title"); //defaultValue by default= ""
+        String studentName = fromAct.getStringExtra("StudentName");
+        int rollNo = fromAct.getIntExtra("Roll No", 0); //no default value by default
+
+        TextView txtStudentInfo;
+        txtStudentInfo = findViewById(R.id.txtStudentInfo);
+
+        txtStudentInfo.setText("RollNo: "+rollNo+", Name: "+studentName);
+
+        //Toolbar - activity(screen) ka toolbar heading/title change karna hai
+        //getSupportActionBar().setTitle(title);
+
+    }
+}

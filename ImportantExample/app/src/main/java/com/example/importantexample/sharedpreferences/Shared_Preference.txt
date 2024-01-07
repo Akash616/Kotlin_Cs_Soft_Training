@@ -1,0 +1,22 @@
+//Android ka andar data save karna ka leya 3 ways mostly used are -
+ 1. Bundle passing - data share kanra ka leya use ata hai, data store ni karta but woh
+    ak Activity say dusra Activity mai data send karna hai, us case mai bundle use 	karta hai.
+ 2. Database - sqlite ka use karna.
+ 3. Shared Preference - data store karna mai kaam ata hai, lakin kam ya short data 	agar apko
+    store karna hai toh woh aap shared pref. mai store kar skta ho.
+	eg - login screen, intro screen(app start first time), small values(store) jo 	later app
+	close hona ka baad bhi, next time user app open kara tab use aya 	uska leya shared pref use karanga.
+
+----------------------------------------------------------------------------------------------------------------------
+Shared Preference?
+ - One of the ways to store data in Android.
+ - It save and retrieves data in the form of key and value pair.
+ - Method 
+     1. apply() - commit your changes
+     2. clear() - remove all values
+     3. remove(String key) - remove the value whose key has been passed as a parameter.
+     4. putString(String key, String value)
+     5. putInt(String key, int value)
+     6. putLong(String key, long value) 
+     7. putFloat(String key, float value)
+     8. etc.
